@@ -2,8 +2,6 @@
 // RM567593
 // 2tdspa
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CPCauaRochaClasses
 {
@@ -16,17 +14,18 @@ namespace CPCauaRochaClasses
         String genero;
         double preco;
 
-        public Jogo(String nome, int dataDeLancamento, String desenvolvedora, int classificacaoIndicativa, String genero, double preco){
-
-            this.nome= nome;
-            this.dataDeLancamento= dataDeLancamento;
-            this.desenvolvedora= desenvolvedora;
-            this.classificacaoIndicativa= classificacaoIndicativa;
-            this.genero= genero;    
-            this.preco= preco;
-
+        public Jogo(String nome, int dataDeLancamento, String desenvolvedora,
+            int classificacaoIndicativa, String genero, double preco)
+        {
+            this.nome = nome;
+            this.dataDeLancamento = dataDeLancamento;
+            this.desenvolvedora = desenvolvedora;
+            this.classificacaoIndicativa = classificacaoIndicativa;
+            this.genero = genero;
+            this.preco = preco;
         }
-        public void Apresentar()
+
+        public virtual void Apresentar()
         {
             Console.WriteLine($"Nome: {nome}");
             Console.WriteLine($"Data de Lançamento: {dataDeLancamento}");
@@ -34,7 +33,6 @@ namespace CPCauaRochaClasses
             Console.WriteLine($"Classificação Indicativa: {classificacaoIndicativa}");
             Console.WriteLine($"Genero: {genero}");
             Console.WriteLine($"Preço: {preco}");
-
         }
     }
 }
